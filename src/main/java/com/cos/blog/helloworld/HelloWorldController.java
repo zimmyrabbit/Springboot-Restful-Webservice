@@ -1,4 +1,4 @@
-package com.cos.blog;
+package com.cos.blog.helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
