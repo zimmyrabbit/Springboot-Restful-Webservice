@@ -15,6 +15,11 @@ public class HelloWorldController {
 	@Autowired
 	private MessageSource messageSource;
 	
+	@GetMapping(path="/")
+	public String test() {
+		return "Hello World";
+	}
+	
 	//GET
 	// /hello-world (endpoint)
 	// @RequestMapping(method=RequestMethod.GET, path="/hello-world")
