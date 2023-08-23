@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.cos</groupId>
 	<artifactId>restful-web-service</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>restful-web-service</name>
 	<description>restful-web-service</description>
