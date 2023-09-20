@@ -35,7 +35,7 @@ $(document).ready(function() {
 	    html2canvas($('#test')[0]).then(function(canvas) { //저장 영역 div id
 		
 	    // 캔버스를 이미지로 변환
-	    var imgData = canvas.toDataURL('image/png');
+	    var imgData = canvas.toDataURL('image/jpeg');
 		     
 	    var imgWidth = 190; // 이미지 가로 길이(mm) / A4 기준 210mm
 	    var pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
@@ -46,14 +46,14 @@ $(document).ready(function() {
 	    var position = 0;
 	       
 	    // 첫 페이지 출력
-	    doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+	    doc.addImage(imgData, 'JPEG', margin, position, imgWidth, imgHeight);
 	    heightLeft -= pageHeight;
 	         
 	    // 한 페이지 이상일 경우 루프 돌면서 출력
 	    while (heightLeft >= 20) {
 	        position = heightLeft - imgHeight;
 	        doc.addPage();
-	        doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+	        doc.addImage(imgData, 'JPEG', margin, position, imgWidth, imgHeight);
 	        heightLeft -= pageHeight;
 	    }
 	 
